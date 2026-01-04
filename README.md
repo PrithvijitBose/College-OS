@@ -1,73 +1,148 @@
-# React + TypeScript + Vite
+# 🌌 SPACE — Modular Organization Workspace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+SPACE is a modular workspace platform that allows organizations to create their own digital environment by **selecting only the features they need**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instead of forcing every organization to use the same bloated system, SPACE works on a **feature-as-module** philosophy.
 
-## React Compiler
+> One SPACE.  
+> Chosen tools.  
+> Zero clutter.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 The Problem
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Organizations today rely on a messy combination of tools:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- WhatsApp groups for announcements
+- Google Drive for files
+- Excel sheets for attendance
+- Physical notice boards
+- Manual processes everywhere
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This leads to:
+- Missed information
+- Confusion
+- Poor accountability
+- Tool fatigue
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 💡 The Solution
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+SPACE introduces the concept of a **customizable organizational workspace**.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+An owner (Principal, CEO, Admin, Organizer) can:
+
+1. Create a SPACE
+2. Select required features (modules)
+3. Add members
+4. Manage everything from one dashboard
+
+Each SPACE is **isolated, configurable, and scalable**.
+
+---
+
+## 🧩 Core Concept: MODULES
+
+Modules are independent features that can be enabled or disabled per SPACE.
+
+Examples:
+- Announcements
+- Attendance Tracking
+- Assignments
+- File Repository
+- Holiday Calendar
+- Anonymous Reporting
+
+A SPACE only loads what it needs.
+
+---
+
+## 🏗️ Current Scope (v0.1)
+
+### Implemented Modules
+
+#### 📢 Announcements
+- Owner can post announcements
+- Important announcements can be pinned
+- Members can view announcements in a clean feed
+
+#### 📋 Attendance
+- Owner can mark attendance
+- Holidays can be added
+- Attendance percentage is auto-calculated
+- Members can view their attendance
+
+---
+
+## 👥 Roles
+
+### SPACE Owner
+- Creates the SPACE
+- Selects modules
+- Manages members
+- Controls data
+
+### Member
+- Views enabled modules
+- Access limited to SPACE rules
+
+---
+
+## 🛠️ Tech Stack
+
+- Frontend: React
+- Backend: Node.js + Express
+- Database: MongoDB
+- Auth: JWT-based authentication
+
+---
+
+## 🧭 Long-Term Vision
+
+SPACE is **not limited to colleges**.
+
+Possible use cases:
+- Colleges
+- Companies
+- Coaching institutes
+- Communities
+- NGOs
+- Startups
+
+The platform will evolve by adding more modules without changing the core architecture.
+
+---
+
+## 🧪 Future Ideas (Planned)
+
+- Assignment Management
+- Exam & Academic Calendar
+- Anonymous Issue Reporting
+- File Repository
+- Role-based Permissions
+- Multi-space support
+- Notifications
+- Analytics Dashboard
+
+(Tracked via GitHub Issues)
+
+---
+
+## 🤝 Contributing
+
+This project is under active development.
+Contributions, ideas, and feedback are welcome.
+
+---
+
+## 📌 Philosophy
+
+> Build small.  
+> Design big.  
+> Scale cleanly.
+
+SPACE is an experiment in **modular system design** and **real-world problem solving**.
