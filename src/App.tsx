@@ -1,8 +1,12 @@
 import React from "react"
+import './App.css'
 
 const App: React.FC= ()=>{
   return(
-    <h1>Hello World</h1>
-  )
+    <div>
+    <h1>SPACE</h1>
+    <button>CREATE YOUR SPACE</button>
+    </div>
+  );
 }
 export default App
